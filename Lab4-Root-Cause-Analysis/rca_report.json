@@ -1,0 +1,50 @@
+{
+  "incident_id": "RCA_20260424_212230",
+  "anomaly_window": {
+    "start": "2026-04-24T21:22:30",
+    "end": "2026-04-24T21:24:30"
+  },
+  "root_cause": {
+    "root_cause_endpoint": "/api/normal",
+    "primary_signal": "validation_error",
+    "confidence_score": 50,
+    "supporting_evidence": {
+      "error_categories": {
+        "SYSTEM_ERROR": 0,
+        "DATABASE_ERROR": 0,
+        "VALIDATION_ERROR": 0,
+        "TIMEOUT_ERROR": 0
+      },
+      "endpoint_error_counts": {
+        "/api/normal": 78,
+        "/api/slow": 21,
+        "/api/error": 10,
+        "/api/db": 6,
+        "/api/validate": 3
+      }
+    }
+  },
+  "timeline": [
+    {
+      "time": "2026-04-24T21:17:30",
+      "state": "Normal",
+      "description": "All metrics within baseline"
+    },
+    {
+      "time": "2026-04-24T21:22:30",
+      "state": "Anomaly Detected",
+      "description": "validation_error detected"
+    },
+    {
+      "time": "2026-04-24T21:23:30",
+      "state": "Peak",
+      "description": "Maximum impact on /api/normal"
+    },
+    {
+      "time": "2026-04-24T21:24:30",
+      "state": "Recovery",
+      "description": "Metrics returning to normal"
+    }
+  ],
+  "recommended_action": "Investigate /api/normal - validation_error. Check logs and metrics for anomalies."
+}
