@@ -1,0 +1,8 @@
+{
+  "anomaly_start_iso": "2026-04-13T23:44:10.186477",
+  "anomaly_end_iso": "2026-04-13T23:46:10.105403",
+  "anomaly_type": "error_spike",
+  "expected_behavior": "During anomaly, error_spike should be clearly visible in Grafana dashboards",
+  "total_requests": 3000,
+  "timestamp": "2026-04-14T00:46:47.504301"
+}
